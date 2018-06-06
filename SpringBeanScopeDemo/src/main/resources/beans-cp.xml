@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myorg" class="io.sample.springdemo.domain.Organization" scope="prototype">
+        <constructor-arg index="0" value="Amazon" name="companyName"/>
+        <constructor-arg index="1" value="1994" name="yearOfIncorporation"/>
+        <property name="postalCode" value="75757"/>
+        <property name="employeeCount" value="7500"/>
+        <property name="slogan" value="Work hard, have fun, make history"/>
+        <property name="businessService" ref="ecommerceService"/>
+    </bean>
+    <bean id="ecommerceService" class="io.sample.springdemo.serviceImpl.EcommerceServiceImpl"/>
+    <bean id="cloudService" class="io.sample.springdemo.serviceImpl.CloudServiceImpl"/>
+</beans>
