@@ -1,10 +1,7 @@
 package io.sample;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Random;
 
-@Component("generator")
 public class NumbergeneratorImpl implements NumberGenerator {
     
     private final Random random = new Random();
